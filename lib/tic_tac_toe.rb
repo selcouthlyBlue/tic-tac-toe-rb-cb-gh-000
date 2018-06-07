@@ -27,6 +27,14 @@ def position_taken?(board, index)
   !(board[index].nil? || board[index] == " ")
 end
 
+def turn(board)
+  position = input_to_index(gets.strip)
+  until valid_move?(board, position)
+    position = input_to_index(gets.strip)
+  end
+  move(board, position, "X")
+end
+
 def won?(board)
   WIN_COMBINATIONS.each do |win_combination|
     if winning_combination?(board, win_combination)

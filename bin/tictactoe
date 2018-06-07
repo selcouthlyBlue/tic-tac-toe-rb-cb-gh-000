@@ -3,4 +3,4 @@
 require_relative '../lib/tic_tac_toe'
 
 board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
-display_board()
+display_board(board)

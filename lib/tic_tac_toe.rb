@@ -15,6 +15,10 @@ def move(board, index, char)
   board[index] = char
 end
 
+def valid_move?(board, position)
+  return position.between?(0, board.length - 1) && !position_taken?(board, position)
+end
+
 def display_row(board, row_index)
   puts " #{board[3 * row_index]} | #{board[3 * row_index + 1]} | #{board[3 * row_index + 2]} "
 end

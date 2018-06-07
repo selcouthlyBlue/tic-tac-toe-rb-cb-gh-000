@@ -35,6 +35,10 @@ def turn(board)
   move(board, position, "X")
 end
 
+def turn_count(board)
+  return board.count(|square| square == "X" || square == "O")
+end
+
 def won?(board)
   WIN_COMBINATIONS.each do |win_combination|
     if winning_combination?(board, win_combination)
